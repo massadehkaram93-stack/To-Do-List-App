@@ -1,0 +1,609 @@
+#auth-box {
+    width: 100% ;
+    height: 100vh ;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+#auth-box .auth-screen{
+    width: 60% ;
+    height: 70% ;
+    display : grid ;
+    grid-template-rows: 1fr ;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-areas: "rig log";
+}
+
+/*--------------------- ^ auth Screen ^ --------------------------------*/
+
+#auth-box .auth-screen .reception-screen {
+    width: 100% ;
+    height: 100% ;
+    display : grid ;
+    grid-area : rig ;
+    grid-template-rows: 80px 1fr ;
+    grid-template-areas: "Empty" "cont";
+}
+
+#auth-box .auth-screen .reception-screen .Empty {
+    grid-area : Empty ;
+}
+
+#auth-box .auth-screen .reception-screen .cont h1 {
+    justify-self: center;
+}
+
+#auth-box .auth-screen .reception-screen .cont p {
+    justify-self: center ;
+}
+
+#auth-box .auth-screen .reception-screen .cont button {
+    display : flex ;
+    justify-self: center ;
+    justify-content: center ;
+    align-items: center;
+    width : 60% ;
+    height: 10% ;
+}
+
+/*-------------------- ^ reception screeen ^ ------------------------------------------*/
+
+#auth-box .auth-screen .register-screen {
+    display : grid ;
+    grid-area: rig;
+    width : 100% ;
+    height : 100% ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr 80px ;
+    grid-template-areas: "title" "cont" "logo";
+}
+
+#auth-box .auth-screen .register-screen h3 {
+    color : var(--main-text);
+    display: grid;
+    grid-area: title;
+    justify-self: center;
+    align-self: center;
+}
+
+#auth-box .auth-screen .register-screen form {
+    grid-area: cont;
+    width : 90%; 
+    height: 100%;
+}
+
+#auth-box .auth-screen .register-screen form div {
+    width : 90% ;
+}
+
+#auth-box .auth-screen .register-screen form input {
+    width : 88% ;
+    height: 30px ;
+}
+
+#auth-box .auth-screen .register-screen form button::before {
+    height : 100% ;
+    width : 0% ;
+}
+
+#auth-box .auth-screen .register-screen form button {
+    width : 60% ; 
+}
+
+#auth-box .auth-screen .register-screen form button::after {
+    height : 100% ;
+    width : 0% ;
+}
+
+#auth-box .auth-screen .register-screen .logos {
+    grid-area: logo;
+    width : 100% ;
+    height: 100%;
+    display : flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*------------------- ^ register screen ^ -------------------------------*/
+
+#auth-box .auth-screen .login-screen {
+    display : grid ;
+    grid-area: log;
+    width : 100% ;
+    height : 100% ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr 80px ;
+    grid-template-areas: "title" "cont" "logo";
+}
+
+#auth-box .auth-screen .login-screen h3 {
+    color : var(--main-text);
+    display: grid;
+    grid-area: title;
+    justify-self: center;
+    align-self: center;
+}
+
+#auth-box .auth-screen .login-screen form {
+    grid-area: cont;
+    width : 90%; 
+    height: 100%;
+}
+
+#auth-box .auth-screen .login-screen form div {
+    width : 90% ;
+}
+
+#auth-box .auth-screen .login-screen form input {
+    width : 88% ;
+    height: 30px ;
+}
+
+#auth-box .auth-screen .login-screen form button::before {
+    height : 100% ;
+    width : 0% ;
+}
+
+#auth-box .auth-screen .login-screen form button {
+    width : 60% ; 
+}
+
+#auth-box .auth-screen .login-screen form button::after {
+    height : 100% ;
+    width : 0% ;
+}
+
+#auth-box .auth-screen .login-screen .logos {
+    grid-area: logo;
+    width : 100% ;
+    height: 100%;
+    display : flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*------------------------------ ^ Login Screen ^ ------------------------------*/
+
+#app-main-screen {
+    width : 100% ;
+    height : 100vh ;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+#app-main-screen .main-screen {
+    width : 60% ;
+    height : 90% ;
+    display : grid ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 40px auto 1fr;
+    grid-template-areas: "DL-btn" "title" "cont" "Display" ;
+}
+
+#app-main-screen .main-screen .mode-name-box {
+    grid-area : DL-btn ;
+    position: relative;
+    width : 100% ;
+    height : 100% ;
+    display: grid ;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "welcome mode";
+}
+
+#app-main-screen .main-screen .mode-name-box .mode {
+    grid-area: mode;
+    width : 43px ;
+    height : 43px ;
+    display : flex ;
+    justify-content: center;
+    align-items: center;
+    justify-self: end;
+}
+
+#app-main-screen .main-screen .title {
+    color : var(--main-text);
+    display : grid ;
+    grid-area : title ;
+    justify-content: center;
+    align-content: center;
+}
+
+#app-main-screen .main-screen .content {
+    display : grid ;
+    grid-area : cont ;
+    justify-content: center;
+    align-content: start;
+}
+
+#app-main-screen .main-screen .content .search-box {
+    width : 100% ;
+    height : fit-content;
+}
+
+#app-main-screen .main-screen .content .search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app-main-screen .main-screen .content .search-box input {
+    width : 85% ;
+    height : 120% ;
+}
+
+#app-main-screen .main-screen .content .add-box {
+    width : 100%; 
+    height : fit-content ;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    margin-bottom : 20px ;
+}
+
+#app-main-screen .main-screen .display {
+    width : 100% ;
+    height : 100% ;
+    display : grid ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: "btns" "cont" ;
+}
+
+#app-main-screen .main-screen .display .buttons {
+    grid-area: btns;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app-main-screen .main-screen .display .buttons ul li {
+    display : inline-block ;
+}
+
+#app-main-screen .main-screen .display .display-tasks {
+    grid-area: cont ;
+    display: grid ;
+    grid-template-rows: 1fr 80px;
+    grid-template-areas: "cont" "colors" ;
+}
+
+#app-main-screen .main-screen .display .display-tasks .all-tasks {
+    grid-area: cont;
+    width : 100%;
+    height : 100% ;
+    display : flex ;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    justify-content: start;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.all-tasks::-webkit-scrollbar {
+    width : 5px ;
+    height : 10px ;
+}
+
+#app-main-screen .main-screen .display .display-tasks .all-tasks li {
+    width : 80% ;
+    min-height: 50px;
+    height: fit-content;
+    display: flex ;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#app-main-screen .main-screen .display .display-tasks .all-tasks .btns button {
+    width : 30px ;
+    height: 30px ;
+}
+
+#app-main-screen .main-screen .display .display-tasks .color-task  {
+    grid-area : colors ;
+    width : 30% ;
+    height : fit-content ;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "title" "cont";
+}
+
+#app-main-screen .main-screen .display .display-tasks .color-task p {
+    grid-area: title;
+}
+
+#app-main-screen .main-screen .display .display-tasks .color-task ul {
+    grid-area: cont;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+#app-main-screen .main-screen .display .display-tasks .color-task ul li button {
+    width : 20px ;
+    height : 20px ;
+}
+
+/*------------------- ^ main screen ^ --------------------------------------------*/
+
+#loading-screen {
+    width : 100% ;
+    height : 100vh ;
+    display : grid ;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "title" "cont";
+    justify-content: center;
+    align-items: center;
+}
+
+#loading-screen .title {
+    grid-area: title;
+    display: flex;
+    align-self: end;
+}
+
+#loading-screen .loud {
+    grid-area: cont;
+    width: 100%;
+    height: 25% ;
+    display: flex;
+    align-self: start;
+}
+
+#loading-screen .loud div {
+    width : 20px ;
+    height: 20px ;
+}
+
+
+/*------------------ ^ loading screen ^ ----------------------*/
+
+#custom-alert {
+    width : 40%;
+    height : 100px;
+    display : flex ;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    align-self: start;
+}
+
+/*------------------- ^ alert ^ -----------------------------*/
+
+@media (max-width : 575px) {
+    #auth-box .auth-screen {
+        width : 80% ;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: "rig" "log";
+    }
+
+    #auth-box .auth-screen .login-screen {
+        grid-area: log;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 1fr ;
+        grid-template-areas: "title" "cont";
+    }
+
+    #auth-box .auth-screen .login-screen form input {
+        width : 80% ;
+    }
+
+    #auth-box .auth-screen .login-screen form div.user-name ,
+    #auth-box .auth-screen .login-screen form div.password{
+        margin-left : 13px ;
+        margin-top: 5px;
+        margin-bottom : 25px ;
+    }
+
+    #auth-box .auth-screen .login-screen form div.user-name {
+        margin-top : 15px
+    }
+
+
+    #auth-box .auth-screen .login-screen .logos {
+        display : none ;
+    }
+
+    #auth-box .auth-screen .reception-screen {
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px 1fr ;
+    }
+
+    #auth-box .auth-screen .reception-screen .cont button {
+        height : 35px ;
+    }
+
+    #auth-box .auth-screen .register-screen {
+        grid-area: rig;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 1fr ;
+        grid-template-areas: "title" "cont";
+    }
+
+    #auth-box .auth-screen .register-screen form input {
+        width : 80% ;
+    }
+
+    #auth-box .auth-screen .register-screen form div.user-name ,
+    #auth-box .auth-screen .register-screen form div.email ,
+    #auth-box .auth-screen .register-screen form div.password {
+        margin-left : 13px ;
+        margin-top: 4px;
+        margin-bottom : 16px ;
+    }
+
+    #auth-box .auth-screen .register-screen form div.user-name {
+        margin-top : 10px
+    }
+
+
+    #auth-box .auth-screen .register-screen .logos {
+        display : none ;
+    }
+
+    #custom-alert {
+        width : 60%;
+    }
+
+    #app-main-screen .main-screen {
+        width : 80% ;
+    }
+
+    #app-main-screen .main-screen .content .search-box {
+        width : 80% ;
+        display: flex;
+        justify-self: center;
+    }
+
+    #app-main-screen .main-screen {
+        grid-template-rows: 80px 40px auto 1fr;
+    }
+
+    #app-main-screen .main-screen .display .display-tasks .color-task  {
+        width : 50% ;
+    }
+}
+
+@media (min-width : 576px) and (max-width : 767px) {
+    #auth-box .auth-screen {
+        width : 80% ;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: "rig" "log";
+    }
+
+    #auth-box .auth-screen .login-screen {
+        grid-area: log;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 1fr ;
+        grid-template-areas: "title" "cont";
+    }
+
+    #auth-box .auth-screen .login-screen form input {
+        width : 80% ;
+    }
+
+    #auth-box .auth-screen .login-screen form div.user-name ,
+    #auth-box .auth-screen .login-screen form div.password{
+        margin-left : 13px ;
+        margin-top: 5px;
+        margin-bottom : 25px ;
+    }
+
+    #auth-box .auth-screen .login-screen form div.user-name {
+        margin-top : 15px
+    }
+
+
+    #auth-box .auth-screen .login-screen .logos {
+        display : none ;
+    }
+
+    #auth-box .auth-screen .reception-screen {
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px 1fr ;
+    }
+
+    #auth-box .auth-screen .reception-screen .cont button {
+        height : 35px ;
+    }
+
+    #auth-box .auth-screen .register-screen {
+        grid-area: rig;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 1fr ;
+        grid-template-areas: "title" "cont";
+    }
+
+    #auth-box .auth-screen .register-screen form input {
+        width : 80% ;
+    }
+
+    #auth-box .auth-screen .register-screen form div.user-name ,
+    #auth-box .auth-screen .register-screen form div.email ,
+    #auth-box .auth-screen .register-screen form div.password {
+        margin-left : 13px ;
+        margin-top: 4px;
+        margin-bottom : 16px ;
+    }
+
+    #auth-box .auth-screen .register-screen form div.user-name {
+        margin-top : 10px
+    }
+
+
+    #auth-box .auth-screen .register-screen .logos {
+        display : none ;
+    }
+
+    #custom-alert {
+        width : 60%;
+    }
+
+    #app-main-screen .main-screen {
+        width : 80% ;
+    }
+
+    #app-main-screen .main-screen .content .search-box {
+        width : 80% ;
+        display: flex;
+        justify-self: center;
+    }
+
+    #app-main-screen .main-screen {
+        grid-template-rows: 80px 40px auto 1fr;
+    }
+
+    #app-main-screen .main-screen .display .display-tasks .color-task  {
+        width : 50% ;
+    }
+}
+
+@media (min-width : 767px) and (max-width : 991px) {
+    #auth-box .auth-screen {
+        width : 80% ;
+        height: 60% ;
+    }
+
+    #auth-box .auth-screen .reception-screen {
+    width: 100% ;
+    height: 100% ;
+    display : grid ;
+    grid-area : rig ;
+    grid-template-rows: 120px 1fr ;
+    grid-template-areas: "Empty" "cont";
+}
+
+    #custom-alert {
+        width : 60%;
+    }
+
+    #app-main-screen .main-screen {
+        width : 80% ;
+    }
+
+    #auth-box .auth-screen .reception-screen .cont button {
+        height : 40px ;
+    }
+
+    #app-main-screen .main-screen .content .search-box {
+        width : 80% ;
+        display: flex;
+        justify-self: center;
+    }
+
+    #app-main-screen .main-screen {
+        grid-template-rows: 80px 40px auto 1fr;
+    }
+
+    #app-main-screen .main-screen .display .display-tasks .color-task  {
+        width : 50% ;
+    }
+}

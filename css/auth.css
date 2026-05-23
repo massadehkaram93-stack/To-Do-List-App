@@ -1,0 +1,827 @@
+#auth-box.none {
+    display: none;
+}
+
+#auth-box {
+    background-color : var(--main-bg) ;
+}
+
+#auth-box .auth-screen {
+    background-color : var(--continar-bg) ;
+    border: 2px solid var(--border-color) ;
+    border-radius: 18px ;
+    -webkit-border-radius: 18px ;
+    -moz-border-radius: 18px ;
+    -ms-border-radius: 18px ;
+    -o-border-radius: 18px ;
+    box-shadow: 0px 10px 20px #222;
+}
+
+/*------------------- ^ auth ^ -----------------------------*/
+
+#auth-box .auth-screen .reception-screen {
+    position: relative;
+    background: var(--reception-bg) ;
+    color : var(--reception-text);
+    border-top-right-radius: 43% ;
+    border-bottom-right-radius: 43%;
+    z-index: 999;
+    transition: 1.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: 1.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: 1.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -ms-transition: 1.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: 1.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#auth-box .auth-screen .reception-screen .cont h1 {
+    color : var(--main-text);
+    margin-bottom : 50px ;
+}
+
+#auth-box .auth-screen  .reception-screen .cont p {
+    color : var(--muted-text);
+    margin-bottom: 80px ;
+}
+
+#auth-box .auth-screen .reception-screen .cont button {
+    outline: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background-color: var(--reception-btn-bg);
+    box-shadow: 2px 3px 7px #222;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    color : var(--mode-btn-text);
+}
+
+#auth-box .auth-screen .reception-screen .cont button:hover {
+    cursor: pointer;
+    background-color: var(--reception-btn-hover);
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    box-shadow: 0px 50px 10px var(--main-shadow);
+}
+
+#auth-box .auth-screen .reception-screen .cont button:active {
+    transition: 0s;
+    -webkit-transition: 0s;
+    -moz-transition: 0s;
+    -ms-transition: 0s;
+    -o-transition: 0s;
+    cursor: pointer;
+    background-color: var(--reception-btn-active);
+    transform: translateY(-8px) scale(0.95);
+    -webkit-transform: translateY(-8px) scale(0.95);
+    -moz-transform: translateY(-8px) scale(0.95);
+    -ms-transform: translateY(-8px) scale(0.95);
+    -o-transform: translateY(-8px) scale(0.95);
+    box-shadow: 0px 50px 10px var(--main-shadow);
+    font-size: small;
+}
+
+#auth-box .auth-screen .reception-screen.open-animation {
+    animation: open-reception-screen 1s forwards;
+    -webkit-animation: open-reception-screen 1s forwards;
+
+}
+
+#auth-box .auth-screen .reception-screen.close-animation {
+    animation: close-reception-screen 1s forwards;
+    -webkit-animation: close-reception-screen 1s forwards;
+
+}
+
+@keyframes open-reception-screen {
+    0% {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        border-top-right-radius: 43%;
+        border-bottom-right-radius: 43%;
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
+        clip-path: (0 0 0 0);
+    }
+
+    50% {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0%;
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
+        clip-path: (0 0 0 0);
+        width : 200% ;
+    }
+
+    51% {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0%;
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
+        clip-path: (0 0 0 0);
+        width : 200% ;
+    }
+
+    100% {
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0%;
+        border-top-left-radius: 43%;
+        border-bottom-left-radius: 43%;
+        clip-path: (0 0 0 50%);
+        width: 100% ;
+}
+}
+
+@keyframes close-reception-screen {
+    0% {
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        border-top-left-radius: 43%;
+        border-bottom-left-radius: 43%;
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0% ;
+        clip-path: (0 0 0 50%);
+    }
+
+    50% {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0% ;
+        clip-path: (0 0 0 0);
+        width : 200%;
+    }
+
+    51% {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0% ;
+        clip-path: (0 0 0 0);
+        width : 200%;
+    }
+
+    100% {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 43%;
+        border-bottom-right-radius: 43% ;
+        clip-path: (0 0 0 0);
+        width : 100%;
+    }
+}
+
+/*----------------^ reception screen ^------------------------------------------------*/
+
+#auth-box .auth-screen .register-screen.none {
+    z-index: -1;
+}
+
+#auth-box .auth-screen .register-screen {
+    position: relative;
+    background-color : var(--continar-bg) ;
+    z-index: 1;
+}
+
+#auth-box .auth-screen .register-screen form {
+    margin : auto ;
+}
+
+#auth-box .auth-screen .register-screen form input {
+    outline: none;
+    border : none;
+    background-color : var(--continar-bg);
+    color : var(--main-text);
+}
+
+#auth-box .auth-screen .register-screen form input#register-Email + label  {
+    color : var(--main-text)
+}
+
+#auth-box .auth-screen .register-screen form input.error {
+    animation: error 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-animation: error 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#auth-box .auth-screen .register-screen form div {
+    background-color : var(--continar-bg);
+    box-shadow: 5px 5px 7px var(--main-shadow) ;
+    border-radius: 6px ;
+    -webkit-border-radius: 6px ;
+    -moz-border-radius: 6px ;
+    -ms-border-radius: 6px ;
+    -o-border-radius: 6px ;
+    margin : 35px 0px ;
+    padding : 3px 6px ;
+}
+
+#auth-box .auth-screen .register-screen form button::before {
+    content: "" ;
+    position: absolute;
+    top: 0;
+    bottom: 0 ;
+    left: 0 ;
+    background-color: var(--btn-hover-bg);
+    transition: 0.3s ease ;
+    -webkit-transition: 0.3s ease ;
+    -moz-transition: 0.3s ease ;
+    -ms-transition: 0.3s ease ;
+    -o-transition: 0.3s ease ;
+    z-index: -1;
+}
+
+#auth-box .auth-screen .register-screen form button {
+    position: relative;
+    margin-left: 50px ;
+    padding: 8px 20px ;
+    border: 1px solid var(--border-color) ;
+    background-color: var(--btn-primary);
+    border-radius: 8px ;
+    -webkit-border-radius: 8px ;
+    -moz-border-radius: 8px ;
+    -ms-border-radius: 8px ;
+    -o-border-radius: 8px ;
+    box-shadow: 0px 5px 7px var(--main-shadow);
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+    color : var(--mode-btn-text);
+}
+
+#auth-box .auth-screen .register-screen form button::after {
+    content: "" ;
+    position: absolute;
+    top: 0;
+    bottom: 0 ;
+    right: 0 ;
+    background-color: var(--btn-hover-bg);
+    transition: 0.3s ease ;
+    -webkit-transition: 0.3s ease ;
+    -moz-transition: 0.3s ease ;
+    -ms-transition: 0.3s ease ;
+    -o-transition: 0.3s ease ;
+    z-index: -1;
+}
+
+#auth-box .auth-screen .register-screen form button:hover::before {
+    cursor: pointer;
+    width : 51% ;
+}
+
+#auth-box .auth-screen .register-screen form button:hover {
+    cursor: pointer;
+    transform: translateY(-7px);
+    -webkit-transform: translateY(-7px);
+    -moz-transform: translateY(-7px);
+    -ms-transform: translateY(-7px);
+    -o-transform: translateY(-7px);
+    box-shadow: 0px 10px 20px var(--main-shadow);
+}
+
+#auth-box .auth-screen .register-screen form button:hover::after {
+    cursor: pointer;
+    width : 51% ;
+}
+
+#auth-box .auth-screen .register-screen form button:active {
+    cursor: pointer;
+    transition: 0s;
+    -webkit-transition: 0s;
+    -moz-transition: 0s;
+    -ms-transition: 0s;
+    -o-transition: 0s;
+    transform: translateY(-5px) scale(0.95);
+    -webkit-transform: translateY(-5px) scale(0.95);
+    -moz-transform: translateY(-5px) scale(0.95);
+    -ms-transform: translateY(-5px) scale(0.95);
+    -o-transform: translateY(-5px) scale(0.95);
+    box-shadow: 0px 5px 10px var(--main-shadow);
+    font-size: small;
+}
+
+#auth-box .auth-screen .register-screen .logos ul li svg {
+    fill: var(--svg-fill);
+}
+
+#auth-box .auth-screen .register-screen .logos ul li {
+    display : inline-block ;
+    margin : 20px ;
+}
+
+#auth-box .auth-screen .register-screen .logos ul li:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+}
+
+#auth-box .auth-screen .register-screen .logos ul li:active {
+    cursor: pointer;
+    transform: scale(0.90);
+    -webkit-transform: scale(0.90);
+    -moz-transform: scale(0.90);
+    -ms-transform: scale(0.90);
+    -o-transform: scale(0.90);
+}
+
+/*-------------- ^ rigester screen ^ -----------------------*/
+
+#auth-box .auth-screen .login-screen.none {
+    z-index: -1;
+}
+
+#auth-box .auth-screen .login-screen {
+    position: relative;
+    background-color : var(--continar-bg) ;
+    z-index: 1;
+}
+
+#auth-box .auth-screen .login-screen form {
+    margin : auto ;
+}
+
+#auth-box .auth-screen .login-screen form input {
+    outline: none;
+    border : none;
+    background-color : var(--continar-bg);
+    color : var(--main-text);
+}
+
+#auth-box .auth-screen .login-screen form input#login-Email + label  {
+    color : var(--main-text)
+}
+
+#auth-box .auth-screen .login-screen form input.error {
+    animation: error 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-animation: error 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#auth-box .auth-screen .login-screen form div {
+    background-color : var(--continar-bg);
+    box-shadow: 5px 5px 7px var(--main-shadow) ;
+    border-radius: 6px ;
+    -webkit-border-radius: 6px ;
+    -moz-border-radius: 6px ;
+    -ms-border-radius: 6px ;
+    -o-border-radius: 6px ;
+    margin : 50px 0px ;
+    padding : 3px 6px ;
+}
+
+#auth-box .auth-screen .login-screen form button::before {
+    content: "" ;
+    position: absolute;
+    top: 0;
+    bottom: 0 ;
+    left: 0 ;
+    background-color: var(--btn-hover-bg);
+    transition: 0.3s ease ;
+    -webkit-transition: 0.3s ease ;
+    -moz-transition: 0.3s ease ;
+    -ms-transition: 0.3s ease ;
+    -o-transition: 0.3s ease ;
+    z-index: -1;
+}
+
+#auth-box .auth-screen .login-screen form button {
+    position: relative;
+    margin-left: 50px ;
+    padding: 8px 20px ;
+    border: 1px solid var(--border-color) ;
+    background-color: var(--btn-primary);
+    border-radius: 8px ;
+    -webkit-border-radius: 8px ;
+    -moz-border-radius: 8px ;
+    -ms-border-radius: 8px ;
+    -o-border-radius: 8px ;
+    box-shadow: 0px 5px 7px var(--main-shadow);
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+    color : var(--mode-btn-text);
+}
+
+#auth-box .auth-screen .login-screen form button::after {
+    content: "" ;
+    position: absolute;
+    top: 0;
+    bottom: 0 ;
+    right: 0 ;
+    background-color: var(--btn-hover-bg);
+    transition: 0.3s ease ;
+    -webkit-transition: 0.3s ease ;
+    -moz-transition: 0.3s ease ;
+    -ms-transition: 0.3s ease ;
+    -o-transition: 0.3s ease ;
+    z-index: -1;
+}
+
+#auth-box .auth-screen .login-screen form button:hover::before {
+    cursor: pointer;
+    width : 51% ;
+}
+
+#auth-box .auth-screen .login-screen form button:hover {
+    cursor: pointer;
+    transform: translateY(-7px);
+    -webkit-transform: translateY(-7px);
+    -moz-transform: translateY(-7px);
+    -ms-transform: translateY(-7px);
+    -o-transform: translateY(-7px);
+    box-shadow: 0px 10px 20px var(--main-shadow);
+}
+
+#auth-box .auth-screen .login-screen form button:hover::after {
+    cursor: pointer;
+    width : 51% ;
+}
+
+#auth-box .auth-screen .login-screen form button:active {
+    cursor: pointer;
+    transition: 0s;
+    -webkit-transition: 0s;
+    -moz-transition: 0s;
+    -ms-transition: 0s;
+    -o-transition: 0s;
+    transform: translateY(-5px) scale(0.95);
+    -webkit-transform: translateY(-5px) scale(0.95);
+    -moz-transform: translateY(-5px) scale(0.95);
+    -ms-transform: translateY(-5px) scale(0.95);
+    -o-transform: translateY(-5px) scale(0.95);
+    box-shadow: 0px 5px 10px var(--main-shadow);
+    font-size: small;
+}
+
+#auth-box .auth-screen .login-screen .logos ul li svg {
+    fill: var(--svg-fill);
+}
+
+#auth-box .auth-screen .login-screen .logos ul li {
+    display : inline-block ;
+    margin : 20px ;
+}
+
+#auth-box .auth-screen .login-screen .logos ul li:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+}
+
+#auth-box .auth-screen .login-screen .logos ul li:active {
+    cursor: pointer;
+    transform: scale(0.90);
+    -webkit-transform: scale(0.90);
+    -moz-transform: scale(0.90);
+    -ms-transform: scale(0.90);
+    -o-transform: scale(0.90);
+}
+
+
+/*----------------- ^ login screen ^ --------------------------------*/
+
+@media (max-width : 575px) {
+    #auth-box .auth-screen .reception-screen {
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+        border-bottom-right-radius: 43%;
+        border-bottom-left-radius: 43%;
+}
+
+        #auth-box .auth-screen .reception-screen .cont h1 {
+            font-size: larger;
+            margin : 20px ;
+        }
+
+        #auth-box .auth-screen .reception-screen .cont p {
+            font-size: 13px;
+            margin: 25px;
+        }
+
+        @keyframes open-reception-screen {
+    0% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        border-bottom-right-radius: 43%;
+        border-bottom-left-radius: 43%;
+        border-top-right-radius: 0%;
+        border-top-left-radius: 0%;
+        clip-path: (0 0 0 0);
+}
+
+    50% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 0%;
+        border-top-left-radius: 0%;
+        clip-path: (0 0 0 0);
+        height: 200% ;
+}
+
+    51% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 0%;
+        border-top-left-radius: 0%;
+        clip-path: (0 0 0 0);
+        height: 200% ;
+}
+
+    100% {
+        transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 43%;
+        border-top-left-radius: 43%;
+        clip-path: (0 0 0 50%);
+        height: 100% ;
+}
+}
+
+@keyframes close-reception-screen {
+    0% {
+        transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        border-bottom-right-radius: 0% ;
+        border-bottom-left-radius: 0%;
+        border-top-left-radius: 43%;
+        border-top-right-radius: 43%;
+        clip-path: (0 0 0 50%);
+}
+
+    50% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        border-bottom-right-radius: 0% ;
+        border-bottom-left-radius: 0%;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+        clip-path: (0 0 0 0);
+        height: 200%;
+}
+
+    51% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0% ;
+        clip-path: (0 0 0 0);
+        height: 200%;
+}
+
+    100% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        border-bottom-right-radius: 43% ;
+        border-bottom-left-radius: 43%;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+        clip-path: (0 0 0 0);
+        height: 100%;
+}
+}
+
+#auth-box .auth-screen .register-screen form input + label ,
+#auth-box .auth-screen .register-screen form input ,
+#auth-box .auth-screen .register-screen form input.submit-register ,
+#auth-box .auth-screen .login-screen form input + label ,
+#auth-box .auth-screen .login-screen form input ,
+#auth-box .auth-screen .login-screen form input.submit-register{
+    font-size: 12px;
+}
+
+}
+
+@media (min-width : 576px) and (max-width : 767px) {
+    #auth-box .auth-screen .reception-screen {
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+        border-bottom-right-radius: 43%;
+        border-bottom-left-radius: 43%;
+}
+
+        #auth-box .auth-screen .reception-screen .cont h1 {
+            font-size: larger;
+            margin : 20px ;
+        }
+
+        #auth-box .auth-screen .reception-screen .cont p {
+            font-size: 13px;
+            margin: 25px;
+        }
+
+        @keyframes open-reception-screen {
+    0% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        border-bottom-right-radius: 43%;
+        border-bottom-left-radius: 43%;
+        border-top-right-radius: 0%;
+        border-top-left-radius: 0%;
+        clip-path: (0 0 0 0);
+}
+
+    50% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 0%;
+        border-top-left-radius: 0%;
+        clip-path: (0 0 0 0);
+        height: 200% ;
+}
+
+    51% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 0%;
+        border-top-left-radius: 0%;
+        clip-path: (0 0 0 0);
+        height: 200% ;
+}
+
+    100% {
+        transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 43%;
+        border-top-left-radius: 43%;
+        clip-path: (0 0 0 50%);
+        height: 100% ;
+}
+}
+
+@keyframes close-reception-screen {
+    0% {
+        transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        border-bottom-right-radius: 0% ;
+        border-bottom-left-radius: 0%;
+        border-top-left-radius: 43%;
+        border-top-right-radius: 43%;
+        clip-path: (0 0 0 50%);
+}
+
+    50% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        border-bottom-right-radius: 0% ;
+        border-bottom-left-radius: 0%;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+        clip-path: (0 0 0 0);
+        height: 200%;
+}
+
+    51% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0% ;
+        clip-path: (0 0 0 0);
+        height: 200%;
+}
+
+    100% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        border-bottom-right-radius: 43% ;
+        border-bottom-left-radius: 43%;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+        clip-path: (0 0 0 0);
+        height: 100%;
+}
+}
+
+#auth-box .auth-screen .register-screen form input + label ,
+#auth-box .auth-screen .register-screen form input ,
+#auth-box .auth-screen .register-screen form input.submit-register ,
+#auth-box .auth-screen .login-screen form input + label ,
+#auth-box .auth-screen .login-screen form input ,
+#auth-box .auth-screen .login-screen form input.submit-register{
+    font-size: 12px;
+}
+}

@@ -1,0 +1,81 @@
+* {
+    padding : 0px ;
+    margin : 0px ;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+:root {
+    /* الخلفية الكبرى للموقع وخلفية صندوق الـ Auth */
+    --main-bg: #f1f5f9;        /* رمادي فاتح جداً ناصع ومريح للعين */
+    --continar-bg: #ffffff;      /* خلفية الشاشات والصناديق (مثل شاشات الدخول والتسجيل) */
+    
+    /* التدرج الخاص بشاشة الريسبشن (ثابت ويمثل هوية التطبيق) */
+    --reception-bg: linear-gradient(135deg, #1f4e46 0%, #133832 100%);
+    --reception-text: #ffffff;    /* نصوص شاشة الريسبشن بيضاء فوق التدرج الداكن */
+    
+    --reception-btn-bg: #ffffff;       /* خلفية الزر بيضاء ناصعة لتبرز فوق الزمرد */
+    --reception-btn-hover: #cbdcd9; 
+    --reception-btn-active: #cbdcd9;    /* رمادي زيتي ناعم وخافت عند الـ Hover*/
+    --reception-btn-border: transparent;  /* بدون حدود */
+    --reception-btn-text: #133832;     /* نص الزر بلون زيتي غامق مأخوذ من التدرج */
+
+    /* النصوص والحدود للشاشات الأخرى */
+    --main-text: #0f172a;         /* اللون الأساسي للنصوص والعناوين (كحلي غامق جداً) */
+    --muted-text: #64748b;        /* لون النصوص الثانوية والمستندات */
+    --border-color: #cbdcd9;      /* ألوان الحدود للـ Inputs والـ Li */
+    
+    /* الأزرار والـ Inputs */
+    --btn-primary: #1f4e46;       /* لون أزرار الـ submit (أخضر زمردي مأخوذ من تدرجك) */
+    --btn-hover-bg: #133832;    
+    --btn-text: #ffffff;          /* نص الأزرار أبيض */
+    --input-bg: #ffffff;          /* خلفية حقول الإدخال */
+    --svg-fill: #1f4e46;          /* لون أيقونات الـ SVG */
+
+    --priority-high--priority-high: #be123c;      
+    --priority-medium: #c2410c;    
+    --priority-low: #15803d;      
+
+    --main-shadow: rgba(6, 20, 18, 0.25); 
+
+    --mode-btn-bg : #ffffff;
+    --mode-btn-bg-hover : #d8d8d8; 
+    --mode-btn-bg-active : #afafaf ;
+    --mode-btn-text: black; 
+}
+
+/* وضع الظلام (Dark Mode) */
+body.dark {
+    --main-bg: #0b1311;        /* الخلفية العامة للموقع تصبح زيتي ليلي داكن جداً */
+    --continar-bg: #132421;      /* الصناديق تصبح بلون زيتي عميق فخم منسجم مع الريسبشن */
+    
+    /* نصوص الشاشات الأخرى في وضع الظلام */
+    --main-text: #e6f2f0;         /* نصوص فاتحة ومشرقة مائلة للأخضر الثلجي مريحة للعين */
+    --muted-text: #7fa69f;        /* رمادي زمردي ناعم للفقرات */
+    --border-color: #1e3b35;      /* حدود داكنة غير مزعجة للعين وسط الظلام */
+    
+    /* الأزرار والمدخلات في وضع الظلام */
+    --btn-primary: #2ea391;       /* زمردي مضيء ومشرق ليبرز بوضوح في العتمة */
+    --btn-hover-bg: #3ce6cd;
+    --btn-text: #05110f;          /* نص غامق جداً فوق الزر المضيء لتحقيق تباين ممتاز */
+    --input-bg: #192f2b;          /* خلفية حقول الإدخال تصبح داكنة */
+    --svg-fill: #e6f2f0;          /* أيقونات السوشيال ميديا تتحول للون الفاتح */
+
+    --reception-btn-bg: rgba(46, 163, 145, 0.15); /* خلفية زجاجية شفافة بلون الزمرد المضيء */
+    --reception-btn-hover: #2ea391;     /* عند التمرير في الدارك*/
+    --reception-btn-active: #2ea391;
+    --reception-btn-text: #2ea391;                /* نص زمردي نيون مضيء ومريح للعين */
+    --reception-btn-border: #2ea391;  
+    
+    --mode-btn-bg: #142825;           /* زيتي داكن جداً ومريح للعين وسط الظلام */
+    --mode-btn-bg-hover: #1e3b35;     /* يفتحّ قليلاً عند تمرير الماوس */
+    --mode-btn-bg-active: #2ea391;    /* يشع باللون الزمردي المضيء لحظة الضغط */
+    --mode-btn-text: #e6f2f0; 
+
+    --priority-high: #be123c;      
+    --priority-medium: #c2410c;    
+    --priority-low: #15803d;    
+}

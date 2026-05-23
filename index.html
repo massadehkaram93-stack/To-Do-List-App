@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="cloudflare.com"/>
+        <link rel="stylesheet" href="./css/main.css">
+        <title>To -Do List App</title>
+    </head>
+
+    <body>
+        
+        <section id="auth-box">
+            
+            <div class="auth-screen" >
+
+                <div class = "reception-screen ">
+                    <div class="Empty"></div>
+                    <div class="cont">
+                        <h1>Hello,Welcome!</h1>
+                        <p>Don't have an account ?</p>
+                        <button class = "register-btn">Register</button>
+                    </div>
+
+                </div>
+
+                <div class = "register-screen none">
+
+                    <h3>Registration</h3>
+
+                    <form action="#">
+                        <div class="user-name">
+                            <input type="text" required placeholder="Username" name = "userName" id = "register-UserName">
+                            <label for="register-UserName">🙍‍♂️</label>
+                        </div>
+
+                        <div class = "email">
+                            <input type="text" required placeholder="Email" name = "userName" id = "register-Email">
+                            <label for="register-Email">✉</label>
+                        </div>
+
+                        <div class="password">
+                            <input type="password" required placeholder="Password" name = "password" id = "register-password">
+                            <label for="register-password">🔐</label>
+                        </div>
+
+                        <button type="submit" class = "submit-register">Register</button>
+
+                    </form>
+
+                    <div class="logos">
+                        <ul>
+                            <li>
+                                <svg role="img" viewBox="0 0 24 24" width="22" height="22" fill="#000000">
+                                    <path d="M12.24 10.285V13.4h6.86c-.277 1.56-1.602 4.585-6.86 4.585-4.54 0-8.24-3.765-8.24-8.4s3.7-8.4 8.24-8.4c2.58 0 4.307 1.095 5.298 2.045l2.465-2.37C18.435 1.21 15.62 0 12.24 0 5.58 0 0 5.37 0 12s5.58 12 12.24 12c6.96 0 11.57-4.89 11.57-11.79 0-.795-.085-1.4-.195-1.925H12.24z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg role="img" viewBox="0 0 24 24" width="22" height="22" fill="#000000">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg role="img" viewBox="0 0 24 24" width="22" height="22" fill="#000000">
+                                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg role="img" viewBox="0 0 24 24" width="22" height="22" fill="#000000">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div> 
+
+                <div class="login-screen">
+
+                    <h3>Login</h3>
+
+                    <form action="#">
+                        <div class="user-name">
+                            <input type="email" required placeholder="Email" name = "Email" id = "login-Email">
+                            <label for="login-Email">✉</label>
+                        </div>
+
+                        <div class="password">
+                            <input type="password" required placeholder="password" name = "password" id = "login-password">
+                            <label for="login-password">🔐</label>
+                        </div>
+
+                        <button type="submit" class = "submit-login">login</button>
+
+                    </form>
+
+                    <div class="logos">
+                        <ul>
+                            <li>
+                                <svg role="img" viewBox="0 0 24 24" width="22" height="22" fill="#000000">
+                                    <path d="M12.24 10.285V13.4h6.86c-.277 1.56-1.602 4.585-6.86 4.585-4.54 0-8.24-3.765-8.24-8.4s3.7-8.4 8.24-8.4c2.58 0 4.307 1.095 5.298 2.045l2.465-2.37C18.435 1.21 15.62 0 12.24 0 5.58 0 0 5.37 0 12s5.58 12 12.24 12c6.96 0 11.57-4.89 11.57-11.79 0-.795-.085-1.4-.195-1.925H12.24z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg role="img" viewBox="0 0 24 24" width="22" height="22" fill="#000000">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg role="img" viewBox="0 0 24 24" width="22" height="22" fill="#000000">
+                                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg role="img" viewBox="0 0 24 24" width="22" height="22" fill="#000000">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>   
+        
+        <div id="custom-alert" class="none">
+            <span class = "alert-text">An account with this email already exists 🔐</span>
+        </div>
+
+        <section id = "loading-screen" class = "none">
+            
+            <div class="title">
+                <h2>Please Wait</h2>
+            </div>
+
+            <div class = "loud">
+                <div class = "one"></div>
+                <div class = "two"></div>
+                <div class = "three"></div>
+            </div>
+            
+        </section>     
+
+        <section id = "app-main-screen">
+
+            <div class="main-screen">
+
+                <div class="mode-name-box">
+
+                    <h2 class="user-name">Welcome,Unkown ✨</h2>
+
+                    <button class = "mode">
+                        <svg width="25" height="25" viewBox="0 0 24 24" fill="currentColor" class = "mode-icon">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="title">
+                    <h2>To-Do list</h2>
+                </div>
+
+                <div class="content">
+
+                    <div class="search-box">
+                        <input type="text" class="search-input" id = "search" placeholder = "Search">
+                        <label for="search">🔎</label>
+                    </div>
+
+                    <div class="add-box">
+                        <input type="text" placeholder="Add a new task..." class = "add-input">
+                        <button class="add-btn">+ add</button>
+                    </div>
+
+                </div>
+
+                <div class="display">
+
+                    <div class="buttons">
+                        <ul>
+                            <li><button class = "all-btn">All</button></li>
+                            <li><button class = "active-btn">Active</button></li>
+                            <li><button class = "complet-btn">Complete</button></li>
+                        </ul>
+                    </div>
+
+                    <div class="display-tasks">
+
+                        <ul class = "all-tasks none">
+                            You didn't add any task yet
+                        </ul>
+
+                        <div class="color-task">
+
+                            <p>Priority</p>
+
+                            <ul>
+                                <li><button class = "red"></button></li>
+                                <li><button class = "yellow"></button></li>
+                                <li><button class = "green"></button></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>    
+
+        <script type="module" src="./js/main.js"></script>
+    </body>
+
+</html>
