@@ -1,10 +1,25 @@
 let server = JSON.parse(localStorage.getItem("server") || "[]") ;
 let allTasks = JSON.parse(localStorage.getItem("tasks") || "[]");
 let mode = localStorage.getItem("mode") || "";
+let refresh = localStorage.getItem("ref") || false ;
 
 if (mode === "dark") {
     document.body.classList.add("dark");
 }
+
+console.log(server);
+
+console.log(refresh);
+
+window.addEventListener("load" , function () {
+    if (refresh) {
+        if (server !== "[]" && server !== [] && server.length !== 0) {
+            render.defaultRenderName(server);
+            navigation.stayInMainScreen();
+            renderAuth.renderAllTasks(allTasks);
+        }
+    }
+});
 
 import { tasksLogic } from './services/tasksLogic.js';
 import { render } from './ui/render.js';
@@ -23,6 +38,8 @@ document.addEventListener("click" , (e) => {
             render.registerRenderName();
             navigation.goToMainScreen();
             renderAuth.renderAllTasks(allTasks);
+            refresh = true ;
+            localStorage.setItem("ref" , refresh);
         }   else {
             let customAlret = document.querySelector("#custom-alert");
             customAlret.classList.remove("none");
@@ -38,6 +55,8 @@ document.addEventListener("click" , (e) => {
             render.loginRenderName(server);
             renderAuth.renderAllTasks(allTasks);
             navigation.goToMainScreen();
+            refresh = true ;
+            localStorage.setItem("ref" , refresh);
         }   else {
             let customAlret = document.querySelector("#custom-alert");
             let AlertText = customAlret.querySelector(".alert-text");
@@ -95,4 +114,5 @@ searchInput.addEventListener("keydown" , function (event) {
         renderAuth.renderSearch(tasksLogic.searchLogic(name , allTasks));
         break;
     }
-});
+}); 
+
