@@ -26,6 +26,12 @@ export const render = {
         let user = server.find((u) => u.Email === emailInput.value);
 
         theCont.innerHTML = `Welcome,${user.Name} ✨` ;
-    }
+    },
 
-};
+    defaultRenderName: function (server)  {
+        if (server !== []) {
+            let theCont = document.querySelector(".main-screen .mode-name-box .user-name");
+            theCont.innerHTML = `Welcome,${server[0].Name} ✨` ;
+        }
+    }
+}
