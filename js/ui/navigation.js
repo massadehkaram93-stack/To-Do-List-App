@@ -57,6 +57,13 @@ export const navigation = {
             loadingScreen.classList.add("none");
             mainScreen.classList.remove("none");
         } , 3000);
-    }
+    }, 
 
+    stayInMainScreen: () => {
+        let authScreen = document.querySelector("#auth-box");
+        authScreen.classList.add("none");
+        let mainScreen = document.querySelector("#app-main-screen");
+        mainScreen.classList.remove("none");
+    }
 };
+
